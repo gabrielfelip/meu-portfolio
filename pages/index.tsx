@@ -1,18 +1,20 @@
 // pages/index.tsx
-import Head from 'next/head';
-import Image from 'next/image';
-import dynamic from 'next/dynamic';
-import React from 'react';
-import { motion } from 'framer-motion';
+import Head from "next/head";
+import Image from "next/image";
+import dynamic from "next/dynamic";
+import React from "react";
+import { motion } from "framer-motion";
 
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const TypeAnimation = dynamic(
   () =>
-    import('react-type-animation').then(
-      (mod) => mod.TypeAnimation as React.ComponentType<React.ComponentProps<typeof mod.TypeAnimation>>
+    import("react-type-animation").then(
+      (mod) =>
+        mod.TypeAnimation as React.ComponentType<
+          React.ComponentProps<typeof mod.TypeAnimation>
+        >
     ),
   {
     ssr: false,
@@ -32,7 +34,6 @@ export default function Home() {
     { name: "Node.js", icon: "/skills/nodejs.svg" },
     { name: "Git", icon: "/skills/git.svg" },
     { name: "Python", icon: "/skills/python.svg" },
-
   ];
 
   // Variantes de animação para a Seção Hero (mantidas)
@@ -84,22 +85,30 @@ export default function Home() {
     },
   };
 
-
   return (
     <div className="min-h-screen bg-dark text-text-light font-body relative overflow-hidden">
-      <div className="absolute inset-0 bg-[url('/images/darkness.png')] bg-repeat opacity-40" style={{ backgroundAttachment: 'fixed' }}></div>
+      <div
+        className="absolute inset-0 bg-[url('/images/darkness.png')] bg-repeat opacity-40"
+        style={{ backgroundAttachment: "fixed" }}
+      ></div>
 
       <div className="relative z-10">
         <Head>
           <title>Gabriel | Portfólio - Desenvolvedor</title>
-          <meta name="description" content="Portfólio de Gabriel, um desenvolvedor de soluções apaixonado por tecnologia." />
+          <meta
+            name="description"
+            content="Portfólio de Gabriel, um desenvolvedor de soluções apaixonado por tecnologia."
+          />
         </Head>
 
         <Navbar />
 
         <main className="container mx-auto px-6 py-12">
           {/* Seção Hero */}
-          <section id="inicio" className="flex flex-col md:flex-row items-center gap-12 mb-20 text-center md:text-left min-h-[calc(100vh-80px)] justify-center">
+          <section
+            id="inicio"
+            className="flex flex-col md:flex-row items-center gap-12 mb-20 text-center md:text-left min-h-[calc(100vh-80px)] justify-center"
+          >
             <motion.div
               className="md:w-1/2"
               variants={heroContainerVariants}
@@ -119,15 +128,16 @@ export default function Home() {
               >
                 <TypeAnimation
                   sequence={[
-                    'Estudante de Análise e Desenvolvimento de Sistemas.', 1500,
-                    'Apaixonado por Tecnologia e Inovação.', 1500,
+                    "Estudante de Análise e Desenvolvimento de Sistemas.",
+                    1500,
+                    "Apaixonado por Tecnologia e Inovação.",
+                    1500,
                   ]}
                   wrapper="span"
                   speed={60}
                   repeat={Infinity}
                   className="block md:inline"
                 />
-                
               </motion.p>
 
               <motion.div
@@ -136,14 +146,35 @@ export default function Home() {
                 initial="hidden"
                 animate="visible"
               >
-                <a href="#projetos" className="bg-accent text-dark px-7 py-3 rounded-lg shadow-md hover:bg-accent-dark transition-all duration-300 transform hover:scale-105 font-medium">
+                <a
+                  href="#projetos"
+                  className="bg-accent text-dark px-7 py-3 rounded-lg shadow-md hover:bg-accent-dark transition-all duration-300 transform hover:scale-105 font-medium"
+                >
                   Ver Projetos
                 </a>
-                <a href="https://linkedin.com/in/gabriel-silva--cs" target="_blank" rel="noopener noreferrer" className="border border-accent text-accent px-7 py-3 rounded-lg shadow-md hover:bg-accent-dark hover:text-dark transition-all duration-300 transform hover:scale-105 font-medium">
+                <a
+                  href="https://linkedin.com/in/gabriel-silva--cs"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border border-accent text-accent px-7 py-3 rounded-lg shadow-md hover:bg-accent-dark hover:text-dark transition-all duration-300 transform hover:scale-105 font-medium"
+                >
                   LinkedIn
                 </a>
-                <a href="/Gabriel_Curriculo.pdf" download className="border border-text-muted text-text-muted px-7 py-3 rounded-lg shadow-md hover:bg-text-muted hover:text-dark transition-all duration-300 transform hover:scale-105 font-medium">
-                  Baixar Currículo
+
+                {/* Botões de Download dos Currículos */}
+                <a
+                  href="/CV-ESTAGIO-PT.pdf"
+                  download="Gabriel_Silva_CV_PT.pdf"
+                  className="border border-text-muted text-text-muted px-7 py-3 rounded-lg shadow-md hover:bg-text-muted hover:text-dark transition-all duration-300 transform hover:scale-105 font-medium"
+                >
+                  Baixar Currículo (PT)
+                </a>
+                <a
+                  href="/CV-ESTAGIO-EN.pdf"
+                  download="Gabriel_Silva_CV_EN.pdf"
+                  className="border border-text-muted text-text-muted px-7 py-3 rounded-lg shadow-md hover:bg-text-muted hover:text-dark transition-all duration-300 transform hover:scale-105 font-medium"
+                >
+                  Download Resume (EN)
                 </a>
               </motion.div>
             </motion.div>
@@ -169,8 +200,13 @@ export default function Home() {
 
           {/* NOVA SEÇÃO: Habilidades em Destaque (Habilidades na Home) */}
           <section className="py-16 text-center">
-            <h2 className="text-3xl md:text-4xl font-heading text-text-light mb-12">Habilidades em Destaque</h2> {/* Novo Título */}
-            <div className="max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-6"> {/* Grade simples, sem categorias */}
+            <h2 className="text-3xl md:text-4xl font-heading text-text-light mb-12">
+              Habilidades em Destaque
+            </h2>{" "}
+            {/* Novo Título */}
+            <div className="max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-6">
+              {" "}
+              {/* Grade simples, sem categorias */}
               {featuredSkills.map((skill) => (
                 <motion.div
                   key={skill.name}
@@ -189,7 +225,9 @@ export default function Home() {
                       className="object-contain"
                     />
                   </div>
-                  <p className="font-medium text-text-light text-center">{skill.name}</p>
+                  <p className="font-medium text-text-light text-center">
+                    {skill.name}
+                  </p>
                 </motion.div>
               ))}
             </div>
@@ -197,7 +235,10 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: featuredSkills.length * 0.1 + 0.2, duration: 0.6 }} // Atraso para aparecer depois dos cards
+              transition={{
+                delay: featuredSkills.length * 0.1 + 0.2,
+                duration: 0.6,
+              }} // Atraso para aparecer depois dos cards
               className="mt-12"
             >
               <a

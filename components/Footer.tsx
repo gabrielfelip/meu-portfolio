@@ -10,13 +10,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 text-center md:text-left">
           {/* Coluna 1: Informações do Portfólio */}
           <div>
-            <h3 className="text-xl font-heading text-accent mb-4 text-blue-400">Gabriel Portfólio</h3>
+            <h3 className="text-xl font-heading text-accent mb-4">Gabriel Portfólio</h3>
             <p className="text-gray-300">Desenvolvedor de soluções que transforma ideias em realidade digital.</p>
           </div>
 
           {/* Coluna 2: Contato */}
           <div>
-            <h3 className="text-xl font-heading text-accent mb-4 text-blue-400">Contato</h3>
+            <h3 className="text-xl font-heading text-accent mb-4">Contato</h3>
             <ul className="space-y-2 text-text-300">
               <li>Email: <a href="mailto:gabriel_felype@hotmail.com" className="hover:text-blue-300 transition-colors">gabriel_felype@hotmail.com</a></li>
             </ul>
