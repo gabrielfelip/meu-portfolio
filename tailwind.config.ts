@@ -5,28 +5,28 @@ const config: Config = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
-    // Adicione outras pastas se você tiver código Tailwind nelas, ex:
-    // './src/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
       colors: {
-        // Defina suas cores personalizadas aqui
-        dark: '#1A1A2E',       // Fundo escuro principal (quase preto azulado)
-        'dark-lighter': '#2A2A40', // Um tom ligeiramente mais claro para cards/elementos
-        accent: '#00F891',     // Um verde neon vibrante para acentos
-        'accent-dark': '#00B066', // Um tom mais escuro do acento
-        'text-light': '#E0E0E0', // Cor de texto clara para contraste no fundo escuro
-        'text-muted': '#A0A0A0', // Cor de texto suave para descrições
+        dark: '#1A1A2E',
+        'dark-lighter': '#2A2A40',
+        accent: '#00F891',
+        'accent-dark': '#00B066',
+        'text-light': '#E0E0E0',
+        'text-muted': '#A0A0A0',
       },
       fontFamily: {
-        heading: ['Poppins', 'sans-serif'], // Uma fonte marcante para títulos
-        body: ['Inter', 'sans-serif'],     // Uma fonte legível para corpo de texto
+        heading: ['Poppins', 'sans-serif'],
+        body: ['Inter', 'sans-serif'],
       },
-      // Você pode adicionar outras extensões de tema aqui, se quiser
+      backdropFilter: {
+          'none': 'none',
+          'blur': 'blur(80px)', // Pode usar qualquer valor de desfoque
+      }
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 };
 
 export default config;
