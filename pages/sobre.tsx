@@ -72,13 +72,16 @@ export default function About() {
             <div className="md:w-2/3 text-text-light text-center md:text-left">
               <h2 className="text-3xl font-heading text-text-light mb-4">Minha Jornada</h2>
               <p className="mb-4 leading-relaxed text-text-muted">
-                Sou estudante de Análise e Desenvolvimento de Sistemas com um forte interesse em transformar ideias em soluções digitais. Minha jornada começou com a paixão por tecnologia e a busca por aprender e aplicar conhecimentos em projetos práticos.
+                Sou estudante de Análise e Desenvolvimento de Sistemas, apaixonado por transformar ideias em soluções práticas que ajudam as pessoas no dia a dia. Gosto de aprender coisas novas e enfrentar desafios que me ajudem a crescer como profissional e pessoa.
               </p>
               <p className="mb-4 leading-relaxed text-text-muted">
-                Atualmente, estou focado em aprofundar minhas habilidades em desenvolvimento web, criando aplicações robustas e intuitivas. Além disso, exploro o poder da automação com Python e o potencial da inteligência artificial para construir soluções inovadoras.
+                Atualmente, estou focado em desenvolvimento web, criando sites e sistemas que funcionam bem e são fáceis de usar. Também gosto de automatizar tarefas para deixar o trabalho mais rápido e simples. Estou sempre aberto a aprender novas tecnologias e a trabalhar em diferentes tipos de projetos.
               </p>
-              <p className="leading-relaxed text-text-muted">
-                Estou em busca de uma oportunidade de estágio onde possa aplicar meu conhecimento, contribuir para projetos significativos e crescer profissionalmente em um ambiente colaborativo.
+              <p className="mb-4 leading-relaxed text-text-muted">
+                Além da tecnologia, sou fã de futebol e pretendo criar um blog para falar sobre esse assunto, juntando minhas duas paixões: tecnologia e esporte.
+              </p>
+              <p className="mb-4 leading-relaxed text-text-muted">
+                Estou buscando uma oportunidade de estágio ou emprego onde eu possa ajudar, aprender bastante e crescer junto com a equipe.
               </p>
               <h3 className="text-2xl font-heading text-text-light mt-6 mb-3">Formação Acadêmica</h3>
               <p className="text-text-muted">

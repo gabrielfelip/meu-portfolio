@@ -25,7 +25,6 @@ export default function Navbar() {
     { name: "Projetos", href: "/projetos" },
     { name: "Tecnologias", href: "/tecnologias" },
     { name: "Certificados", href: "/certificados" },
-    { name: "Contato", href: "/contatos" },
   ];
 
   return (
